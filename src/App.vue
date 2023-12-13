@@ -5,7 +5,9 @@ import Header from "./components/Header.vue"
 </script>
 
 <template>  
-  <h1>Desde Pinia</h1>
+  <h1 
+    class="text-3xl font-bold underline"
+  >Desde Pinia</h1>
   <Header/>
 </template>
 
