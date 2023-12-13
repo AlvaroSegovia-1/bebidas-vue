@@ -1,12 +1,15 @@
 <script setup>
 import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router';
+import { useBebidasStore } from '../stores/bebidas'
 
 const route = useRoute()
+const store = useBebidasStore()
+//console.log(store.categorias)
 
 const paginaInicio = computed(()=> route.name === 'inicio')
 
-console.log(route)
+//console.log(route)
 </script>
 
 <template>  
@@ -71,6 +74,11 @@ console.log(route)
                   class="p-3 w-full rounded-lg focus:outline-none"
                   >
                   <option value="">-- Seleccione --</option>
+                  <option 
+                    v-for="categoria in store.categorias "
+                    :key="categoria.strCategory"
+                    :value="categoria.strCategory"
+                  >{{ categoria.strCategory }}</option>
                 </select>
                 <input
                    type="submit"
