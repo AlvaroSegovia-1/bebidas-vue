@@ -3,5 +3,7 @@
 
 <template>
     <h1 class="text-6xl font-extrabold"
-    >Recetas</h1>
+    >
+    Favoritos
+    </h1>
 </template>
